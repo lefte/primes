@@ -59,6 +59,9 @@ Router::scope('/', function (RouteBuilder $routes) {
      */
     $routes->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
 
+    // Allow the Primes route to display JSON
+    $routes->connect('/primes/*', ['controller' => 'Primes', 'action' => 'index'])->setExtensions(['json']);
+
     /**
      * Connect catchall routes for all controllers.
      *

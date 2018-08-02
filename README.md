@@ -1,4 +1,16 @@
 # Erik's Prime Number Generator Sample
+## To Run
+
+Check out this repo, run the built-in server using ```bin/cake server``` and browser to ```localhost:8765```
+
+## JSON Output
+
+Can be listed at: ```localhost:8765/prime.json```
+
+## Front-end output
+
+Should be found at: ```localhost:8765```
+
 ## CakePHP Application Skeleton
 
 [![Build Status](https://img.shields.io/travis/cakephp/app/master.svg?style=flat-square)](https://travis-ci.org/cakephp/app)
