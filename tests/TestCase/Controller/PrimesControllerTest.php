@@ -16,7 +16,9 @@ class PrimesControllerTest extends IntegrationTestCase
      */
     public function testIndex()
     {
-        $this->markTestIncomplete('Not implemented yet.');
+      $result = $this->get('/primes');
+
+      $this->assertResponseOk();
     }
 
     /**
@@ -25,6 +27,25 @@ class PrimesControllerTest extends IntegrationTestCase
      * @return void
      */
     public function testPrimesIsArray() {
+      $this->configRequest([
+        'headers' => ['Accept' => 'application/json']
+      ]);
+      $result = $this->get('/primes');
+
+      // Check that the response was a 200
+      $this->assertResponseOk();
+
+      // Assert that it's an array
+      // fwrite(STDERR, print_r(json_decode((string)$this->_response->getBody(), true), TRUE));
+      $this->assertTrue(is_array(json_decode((string)$this->_response->getBody(), true)));
+    }
+
+    /**
+     * Test whether the first item is a 2
+     *
+     * @return void
+     */
+    public function testPrimesBeginsWithTwo() {
       $this->configRequest([
         'headers' => ['Accept' => 'application/json']
       ]);

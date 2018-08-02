@@ -26,6 +26,7 @@ class PrimesController extends AppController
     // Just a test prime array for now
     $primes = array(2, 3, 5, 7);
 
+    $this->viewBuilder()->setLayout('empty');
     $this->set([
       '_serialize' => ['primes'],
       'primes' =>$primes,
