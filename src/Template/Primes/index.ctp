@@ -2,7 +2,7 @@
 
 <h5>Postman Example:
   <pre>curl -X GET \
-  http://localhost:8765/primes.json \
+  http://localhost:8765/primes \
   -H 'Accept: application/json' \
   -H 'Cache-Control: no-cache' \
   -H 'Postman-Token: d7842833-ffd0-427b-b29e-d7902a6816ef' \
