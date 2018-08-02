@@ -1,7 +1,9 @@
 # Erik's Prime Number Generator Sample
 ## To Run
 
-Check out this repo, then run the built-in server using ```bin/cake server``` and browse to ```localhost:8765```.
+Requires PHP and Composer to be installed.
+
+Check out this repo, update composer dependencies using ```composer update```, then run the built-in server using ```bin/cake server``` and browse to ```localhost:8765```.
 
 ## JSON Output
 
@@ -11,10 +13,11 @@ The JSON prime array can be found at: ```localhost:8765/primes```. If browsed us
 
 A simple page with an AJAX call can be found at: ```localhost:8765```.
 
-## CakePHP Application Skeleton
+## Testing
 
-[![Build Status](https://img.shields.io/travis/cakephp/app/master.svg?style=flat-square)](https://travis-ci.org/cakephp/app)
-[![Total Downloads](https://img.shields.io/packagist/dt/cakephp/app.svg?style=flat-square)](https://packagist.org/packages/cakephp/app)
+PHPUnit tests can be run with ```vendor/bin/phpunit``` to run all tests in the ```tests``` folders.
+
+## CakePHP Application Skeleton
 
 A skeleton for creating applications with [CakePHP](https://cakephp.org) 3.x.
 
