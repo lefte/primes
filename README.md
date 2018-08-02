@@ -5,7 +5,7 @@ Check out this repo, then run the built-in server using ```bin/cake server``` an
 
 ## JSON Output
 
-The JSON prime array can be found at: ```localhost:8765/prime.json```. If browsed using a JSON request, it returns as JSON. If not, it returns a helpful message instead.
+The JSON prime array can be found at: ```localhost:8765/primes```. If browsed using a JSON request, it returns as JSON. If not, it returns a helpful message instead. It can also be forced to output JSON by browsing to ```localhost:8765/primes.json```.
 
 ## Front-end output
 
