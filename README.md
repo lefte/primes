@@ -1,15 +1,15 @@
 # Erik's Prime Number Generator Sample
 ## To Run
 
-Check out this repo, run the built-in server using ```bin/cake server``` and browser to ```localhost:8765```
+Check out this repo, then run the built-in server using ```bin/cake server``` and browse to ```localhost:8765```.
 
 ## JSON Output
 
-Can be listed at: ```localhost:8765/prime.json```
+The JSON prime array can be found at: ```localhost:8765/prime.json```. If browsed using a JSON request, it returns as JSON. If not, it returns a helpful message instead.
 
 ## Front-end output
 
-Should be found at: ```localhost:8765```
+A simple page with an AJAX call can be found at: ```localhost:8765```.
 
 ## CakePHP Application Skeleton
 
