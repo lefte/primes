@@ -18,7 +18,14 @@ class PrimesControllerTest extends IntegrationTestCase
     {
       $result = $this->get('/primes');
 
+      // Can we reach it?
       $this->assertResponseOk();
+
+      // This should not be an array
+      $this->assertFalse(is_array(json_decode((string)$this->_response->getBody(), true)));
+
+      // Check for a basic helpful message
+      $this->assertContains('You should get this page using Postman', (string)$this->_response->getBody());
     }
 
     /**
@@ -27,6 +34,7 @@ class PrimesControllerTest extends IntegrationTestCase
      * @return void
      */
     public function testPrimesIsArray() {
+      // Ensure we ask for JSON
       $this->configRequest([
         'headers' => ['Accept' => 'application/json']
       ]);
@@ -53,5 +61,12 @@ class PrimesControllerTest extends IntegrationTestCase
 
       // Check that the response was a 200
       $this->assertResponseOk();
+
+      // Set the first element to a variable
+      $primeArray = json_decode((string)$this->_response->getBody(), true)['primes'];
+      $firstElement = reset($primeArray);
+
+      // Assert that the first element is a 2
+      $this->assertEquals($firstElement, 2);
     }
 }
